@@ -9,12 +9,12 @@
 .alone {
     position: relative;
     border: 2px solid black;
+    border-radius: 50px;
     text-align: center;
     height: 200px;
     width: 150px;
     align-content:center;
     outline: 0;
-    background-clip: padding-box;
     overflow: hidden;    
 }
 
@@ -23,6 +23,7 @@
     display: inline-block;
     position: absolute;
     background-color:red;
+    
     left: 0; 
     right: 0; 
     top:-30%;
@@ -52,6 +53,7 @@
     display: block;
     position: absolute;
     background-color:white;
+    border-radius: 50px;
     border: 0;
     top: 2px;
     left:2px;
