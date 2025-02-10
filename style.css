@@ -1,0 +1,66 @@
+*
+{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.alone {
+    position: relative;
+    border: 2px solid black;
+    text-align: center;
+    height: 200px;
+    width: 150px;
+    align-content:center;
+    outline: 0;
+    background-clip: padding-box;
+    overflow: hidden;    
+}
+
+.alone::after {
+    content:'';
+    display: inline-block;
+    position: absolute;
+    background-color:red;
+    left: 0; 
+    right: 0; 
+    top:-30%;
+    margin-inline: auto;  
+    width: 70%;
+    height: 160%;
+    z-index: -2; 
+    transition: all 0.5s ease-in-out;
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.alone:hover::after {
+    background-color: black;
+}
+
+.alone::before {
+    content:'';
+    display: block;
+    position: absolute;
+    background-color:white;
+    border: 0;
+    top: 2px;
+    left:2px;
+    border: 1px solid black;
+    height: 97%;
+    width: 96%;
+    z-index: -1;
+    white-space: pre;
+    transform: rotate(180deg); 
+    transition: all 0.5s ease-in-out;
+    
+}
